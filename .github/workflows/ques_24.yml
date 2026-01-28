@@ -1,5 +1,10 @@
+name: TDS GitHub Action Test
+
+on: [push]
+
 jobs:
   test:
+    runs-on: ubuntu-latest
     steps:
       - name: 24ds1000021@ds.study.iitm.ac.in
         run: echo "Hello, world!"
