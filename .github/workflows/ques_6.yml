@@ -8,3 +8,21 @@ jobs:
     steps:
       - name: 24ds1000021@ds.study.iitm.ac.in
         run: echo "Hello, world!"
+        
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Cache dependencies
+        id: cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: cache-484fc46
+
+      - name: prime-cache-484fc46
+        run: echo "Cache hit? ${{ steps.cache.outputs.cache-hit }}"
