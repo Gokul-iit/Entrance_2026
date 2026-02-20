@@ -1,16 +1,6 @@
 name: TDS GitHub Action Test
 
-version: 2
-
 on: [push]
-
-updates:
-  - package-ecosystem: "pip"
-    directory: "/"
-    schedule:
-      interval: "weekly"
-    commit-message:
-      prefix: "deps"  
 
 jobs:
   test:
